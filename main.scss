@@ -1,1 +1,9 @@
-
+@import '/blocks/utils/mixins';
+@import '/blocks/utils/keyframes';
+@import 'blocks/people';
+@import 'blocks/person';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}

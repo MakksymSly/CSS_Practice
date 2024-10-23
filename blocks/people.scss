@@ -1,0 +1,15 @@
+.people {
+	justify-items: center;
+	gap: 40px;
+	@include page-grid;
+	padding: 30px 35px 0;
+	@include on-750 {
+		padding: 30px 160px 0;
+	}
+	@include on-1000 {
+		padding: 30px 55px 0;
+	}
+	@include on-1500 {
+		padding: 30px 305px 0;
+	}
+}
