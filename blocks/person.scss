@@ -1,0 +1,77 @@
+.person {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px 10px 16px;
+	&__photo {
+		position: relative;
+		margin-bottom: 8px;
+	}
+	&__image {
+		width: 200px;
+		border-radius: 100%;
+	}
+
+	&__rank {
+		text-align: center;
+		line-height: 32px;
+		position: absolute;
+		top: 50%;
+		transform: translate(-40px, -50%);
+		background-color: #fff;
+		width: 32px;
+		height: 32px;
+		color: #8b0000;
+		border-radius: 200px;
+		font-family: Arial;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	&__name {
+		color: #2f4f4f;
+		font-family: Arial;
+		font-size: 20px;
+		line-height: 23px;
+		font-weight: bold;
+
+		&--link {
+			text-decoration: none;
+		}
+	}
+
+	&__extra {
+		margin-top: 9px;
+		visibility: hidden;
+		font-family: Arial;
+		font-size: 18px;
+		line-height: 20.7px;
+		color: #000;
+	}
+
+	&:hover {
+		background-color: #eee;
+		.person__extra {
+			visibility: visible;
+		}
+		.person__photo {
+			animation-name: photo-animation;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-delay: 0.3s;
+		}
+		.person__image {
+			animation-name: image-animation;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+	}
+	&:not(:hover) .person__image {
+		animation-name: image-hover-out;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+}
